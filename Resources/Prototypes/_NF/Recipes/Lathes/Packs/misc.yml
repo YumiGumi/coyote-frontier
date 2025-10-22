@@ -145,6 +145,9 @@
   - ClothingOuterHardsuitScaf
   - ClothingOuterHardsuitPilot
   - ClothingOuterHardsuitMaximPrototype
+  - ClothingOuterHardsuitNoble
+  - ClothingOuterHardsuitSurplus
+  - ClothingOuterHardsuitHostileEnvironment
 
 - type: latheRecipePack
   id: NFPouches
