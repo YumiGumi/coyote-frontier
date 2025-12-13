@@ -4,7 +4,8 @@
   description: trait-scent-vanilla-desc
   category: Scents
   cost: 1
-  scentProto: ScentVanilla
+  scentProtos:
+  - ScentVanilla
 
 - type: trait
   id: ScentCitrus
@@ -12,7 +13,8 @@
   description: trait-scent-citrus-desc
   category: Scents
   cost: 1
-  scentProto: ScentCitrus
+  scentProtos:
+  - ScentCitrus
 
 - type: trait
   id: ScentLinen
@@ -20,7 +22,8 @@
   description: trait-scent-linen-desc
   category: Scents
   cost: 1
-  scentProto: ScentLinen
+  scentProtos:
+  - ScentLinen
 
 - type: trait
   id: ScentMusk
@@ -28,5 +31,6 @@
   description: trait-scent-musk-desc
   category: Scents
   cost: 1
-  scentProto: ScentMusk
+  scentProtos:
+  - ScentLewdMusk
 

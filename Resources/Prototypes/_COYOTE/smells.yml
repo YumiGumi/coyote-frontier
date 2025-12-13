@@ -1,23 +1,4 @@
 - type: scent
-  id: ScentDirectOnly
-  abstract: true
-  directOnly: true
-  msgsDirect:
-  - "%TARGET% has a distinct smell."
-  msgsFar: []
-  msgsClose: []
-
-- type: scent
-  id: ScentLewd
-  abstract: true
-  isLewd: true
-
-- type: scent
-  id: ScentStinky
-  abstract: true
-  isStinky: true
-
-- type: scent
   id: ScentBase
   closeRange: 2
   farRange: 10
@@ -33,27 +14,49 @@
   blockingComponents: []
 
 - type: scent
+  id: ScentDirectOnly
+  abstract: true
+  directOnly: true
+  msgsDirect:
+  - scent-default-direct
+  msgsFar: []
+  msgsClose: []
+
+- type: scent
+  id: ScentLewd
+  abstract: true
+  isLewd: true
+
+- type: scent
+  id: ScentStinky
+  abstract: true
+  isStinky: true
+
+- type: scent
   id: ScentExampleForFenny
   parents:
     - ScentBase
+  msgsExamine:
+    - scent-default-examine
   msgsDirect:
-    - "%TARGET% smells like you'd expect."
+    - scent-default-direct
   msgsClose:
-    - "You smell something."
+    - scent-default-close
   msgsFar:
-    - "You catch a faint scent."
-
+    - scent-default-far
 - type: scent
   id: ScentLewdExampleForFenny
   parents:
     - ScentBase
     - ScentLewd
+  msgsExamine:
+    - scent-default-lewd-examine
   msgsDirect:
-    - "%TARGET% has a very lewd scent."
+    - scent-default-lewd-direct
   msgsClose:
-    - "You smell something lewd."
+    - scent-default-lewd-close
   msgsFar:
-    - "You catch a faint lewd scent."
+    - scent-default-lewd-far
 
 - type: scent
   id: ScentDirectOnlyExampleForFenny
@@ -61,7 +64,7 @@
     - ScentBase
     - ScentDirectOnly
   msgsDirect:
-    - "%TARGET% smells really cool."
+    - scent-default-cool-direct
 
 - type: scent
   id: ScentDirectOnlyLewdExampleForFenny
@@ -70,7 +73,7 @@
     - ScentDirectOnly
     - ScentLewd
   msgsDirect:
-    - "%TARGET% smells really horny."
+    - scent-default-lewd-direct
 
 
 # Primary Scents
@@ -79,36 +82,42 @@
   id: ScentLinen
   parents:
     - ScentBase
+  msgsExamine:
+  - scent-linen-examine
   msgsDirect:
-    - "%TARGET% smells like fresh linen."
+  -  scent-linen-direct
   msgsClose:
-    - "You smell a trace of fresh linen."
+  - scent-linen-close
   msgsFar:
-    - "You catch a faint whiff of fresh linen."
+  - scent-linen-far
 
 
 - type: scent
   id: ScentCitrus
   parents:
     - ScentBase
+  msgsExamine:
+  - scent-citrus-examine
   msgsDirect:
-    - "%TARGET% smells like citrus."
+  - scent-citrus-direct
   msgsClose:
-    - "You smell a trace of citrus."
+  - scent-citrus-close
   msgsFar:
-    - "You catch a faint whiff of citrus."
+  - scent-citrus-far
 
 
 - type: scent
   id: ScentVanilla
   parents:
     - ScentBase
+  msgsExamine:
+  - scent-vanilla-examine
   msgsDirect:
-    - "%TARGET% smells like smooth vanilla."
+  - scent-vanilla-direct
   msgsClose:
-    - "You smell a trace of vanilla."
+  - scent-vanilla-close
   msgsFar:
-    - "You catch a faint whiff of vanilla."
+  - scent-vanilla-far
 
 # Lewd Scents
 
@@ -117,9 +126,11 @@
   parents:
     - ScentBase
     - ScentLewd
+  msgsExamine:
+  - scent-musk-examine
   msgsDirect:
-    - "%TARGET% has a very musky scent."
+  - scent-musk-direct
   msgsClose:
-    - "You smell something musky."
+  - scent-musk-close
   msgsFar:
-    - "You catch a faint musky scent."
+  - scent-musk-far

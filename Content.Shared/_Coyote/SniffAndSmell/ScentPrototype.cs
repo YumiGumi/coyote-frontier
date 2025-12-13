@@ -1,4 +1,5 @@
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 
 namespace Content.Shared._Coyote.SniffAndSmell;
 
@@ -12,13 +13,21 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     [IdDataField]
     public string ID { get; } = default!;
 
-    /// <inheritdoc/>
-    [DataField]
-    public bool Abstract { get; set; } = default!;
+    /// <inheritdoc />
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<ScentPrototype>))] // Frontier: EntityPrototype<BiomePrototype
+    public string[]? Parents { get; private set; }
 
-    /// <inheritdoc/>
-    [DataField]
-    public string[]? Parents { get; set; } = default!;
+    /// <inheritdoc />
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
+
+
+    /// <summary>
+    /// Examine text for this scent
+    /// </summary>
+    [DataField("msgsExamine")]
+    public List<string> ScentsExamine = new();
 
     /// <summary>
     /// Direct scent messages, no range
@@ -98,6 +107,12 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     /// </summary>
     [DataField("directOnly")]
     public bool DirectOnly = false;
+
+    /// <summary>
+    /// Requires line of sight to smell
+    /// </summary>
+    [DataField("requireLoS")]
+    public bool RequireLoS = false;
 
     /// <summary>
     /// Priority multiplier for this scent

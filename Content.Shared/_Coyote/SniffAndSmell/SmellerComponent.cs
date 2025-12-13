@@ -45,4 +45,17 @@ public sealed partial class SmellerComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("smellDetectionInterval")]
     public TimeSpan SmellDetectionInterval = TimeSpan.FromSeconds(10);
+
+    /// <summary>
+    /// The next time we can update pending smells.
+    /// </summary>
+    [ViewVariables]
+    public TimeSpan NextPendingSmellUpdateTime = TimeSpan.Zero;
+
+    /// <summary>
+    /// The interval between pending smell updates.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    public TimeSpan PendingSmellUpdateInterval = TimeSpan.FromSeconds(5);
 }

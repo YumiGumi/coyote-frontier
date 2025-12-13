@@ -1,24 +1,31 @@
 using Robust.Shared.Map;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Coyote.SniffAndSmell;
 
 /// <summary>
 /// This is a ticket for a pending smell.
 /// </summary>
-[DataDefinition]
-public sealed partial class SmellTicket(
+public sealed class SmellTicket(
     EntityUid sourceEntity,
-    Scent scent,
+    ProtoId<ScentPrototype> scentProto,
+    string scentGuid,
     MapCoordinates origin,
     TimeSpan createdTime,
-    bool isLewd = false
+    float distance
 )
 {
     /// <summary>
-    /// The scent prototype ID
+    /// The proto for the scent this ticket is for
     /// </summary>
     [DataField]
-    public Scent Smell = scent;
+    public ProtoId<ScentPrototype> ScentProto = scentProto;
+
+    /// <summary>
+    /// The unique-ish ID for the scent instance this ticket is for
+    /// </summary>
+    [DataField]
+    public string ScentInstanceId = scentGuid;
 
     /// <summary>
     /// The entity that this smell came from
@@ -47,22 +54,10 @@ public sealed partial class SmellTicket(
     public TimeSpan CreatedTime = createdTime;
 
     /// <summary>
-    /// Is it lewd?
+    /// Last recorded distance from source
     /// </summary>
     [DataField]
-    public bool IsLewd = isLewd;
-
-    /// <summary>
-    /// Require LOS?
-    /// </summary>
-    [DataField]
-    public bool RequireLoS = true;
-
-    /// <summary>
-    /// Rolled random cooldown for this ticket
-    /// </summary>
-    [DataField]
-    public TimeSpan CooldownTime = TimeSpan.Zero;
+    public float Distance = distance;
 
     /// <summary>
     /// Determines if this ticket's priority is higher than another ticket's priority.
@@ -76,9 +71,13 @@ public sealed partial class SmellTicket(
     /// <summary>
     /// Gets the priority value for this ticket.
     /// </summary>
-    public double GetPriority()
+    public double GetPriority(IPrototypeManager prototypeManager)
     {
-        return Priority * Smell.ScentProto.PriorityMultiplier;
+        if (!prototypeManager.TryIndex(ScentProto, out var scentProto))
+        {
+            return Priority;
+        }
+        return Priority * scentProto.PriorityMultiplier;
     }
 
     /// <summary>

@@ -11,7 +11,7 @@ public sealed partial class ScentComponent : Component
     /// <summary>
     /// The input list of prototypes to load into the scent dictionary.
     /// </summary>
-    [DataField("scents")]
+    [DataField("startScents")]
     public List<ProtoId<ScentPrototype>> ScentPrototypesToAdd = new()
     {
         "ScentDefault",
