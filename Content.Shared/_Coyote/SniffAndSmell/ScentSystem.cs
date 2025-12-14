@@ -218,6 +218,8 @@ public sealed class ScentSystem : EntitySystem
 
         if (scentDescriptions.Count == 0)
             return;
+        // shuffle descriptions
+        _rng.Shuffle(scentDescriptions);
         // combine descriptions
         // "They smell like X, Y, and Z."
         string combinedDesc;
