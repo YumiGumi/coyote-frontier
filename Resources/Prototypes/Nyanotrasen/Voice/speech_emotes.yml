@@ -8,7 +8,6 @@
   showInWheel: false # CS
   whitelist:
     components:
-    - LizardEmotes
     - Vocal
   blacklist:
     components:
