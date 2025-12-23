@@ -101,5 +101,6 @@
   - ContractorCartridge
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorInstruments
   - NFSpeciesSpecific
   canCustomizeName: true # Allows pseudonyms.
