@@ -353,7 +353,7 @@
 
 - type: entity # Creator: Flick (Coyote Frontier)
   id: PaperWrittenNfsdSelfDutyLog
-  name: duty log
+  name: self clocking log
   categories: [ HideSpawnMenu ]
   parent: Paper
   components:
