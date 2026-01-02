@@ -32,7 +32,7 @@
 - type: startingGear
   id: SecurityGuardGear
   equipment:
-    eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSecurity # Coyote ClothingEyesGlassesSunglasses < ClothingEyesGlassesSecurity
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
     pocket2: CSMagazinePistol40 # Coyote NFMagazineHighCapacityPistol35 < CSMagazinePistol40
   storage:
