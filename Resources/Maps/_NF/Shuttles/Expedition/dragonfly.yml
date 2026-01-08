@@ -29,7 +29,7 @@ tilemap:
   5: FloorSteelOffset
   1: FloorTechMaint
   106: FloorTechMaint2
-  9: FloorTechMaintDark
+  9: FloorTechMaint
   119: FloorWood
   121: Lattice
   122: Plating
