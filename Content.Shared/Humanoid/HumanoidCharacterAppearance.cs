@@ -35,14 +35,16 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     [DataField]
     public HumanoidLegStyle LegStyle { get; set; } = HumanoidLegStyle.Plantigrade;
 
-    public HumanoidCharacterAppearance(string hairStyleId,
+    public HumanoidCharacterAppearance(
+        string hairStyleId,
         Color hairColor,
         string facialHairStyleId,
         Color facialHairColor,
         Color eyeColor,
         Color skinColor,
         List<Marking> markings,
-        HumanoidLegStyle legStyle = HumanoidLegStyle.Plantigrade)
+        HumanoidLegStyle legStyle = HumanoidLegStyle.Plantigrade
+        )
     {
         HairStyleId = hairStyleId;
         HairColor = ClampColor(hairColor);

@@ -50,7 +50,7 @@ namespace Content.Shared.Humanoid.Markings
         /// Used for digitigrade legs that are cute as heck.
         /// Disregard this if the leg style is plantigrade.
         /// </summary>
-        [DataField("alternateSprites")]
+        [DataField("altSprites")]
         public Dictionary<HumanoidLegStyle, ProtoId<MarkingPrototype>> AlternateSprites { get; private set; } = new();
 
         /// <summary>

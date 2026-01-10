@@ -189,6 +189,8 @@
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: torso_m
+  altSprites:
+    DigitigradePaw: DigilegSynthlizTorsoMale
 
 - type: marking
   id: MobIPCTorsoFemaleDefault

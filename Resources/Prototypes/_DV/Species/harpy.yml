@@ -153,48 +153,56 @@
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_m
+  altSprites:
+    DigitigradePaw: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyTorsoMale
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_m
+  altSprites:
+    DigitigradePaw: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyTorsoFemale
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_f
+  altSprites:
+    DigitigradePaw: DigilegHumanTorsoFemaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyLLeg
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobHarpyLHand
-  baseSprite:
-    sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobHarpyLArm
-  baseSprite:
-    sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: l_arm
+  altSprites:
+    DigitigradePaw: DigilegAvianLegLeft
 
 - type: humanoidBaseSprite
   id: MobHarpyLFoot
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: l_foot
+  altSprites:
+    DigitigradePaw: DigilegAvianFootLeft
 
 - type: humanoidBaseSprite
   id: MobHarpyRLeg
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: r_leg
+  altSprites:
+    DigitigradePaw: DigilegAvianLegRight
+
+- type: humanoidBaseSprite
+  id: MobHarpyRFoot
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: r_foot
+  altSprites:
+    DigitigradePaw: DigilegAvianFootRight
 
 - type: humanoidBaseSprite
   id: MobHarpyRHand
@@ -209,7 +217,13 @@
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: MobHarpyRFoot
+  id: MobHarpyLHand
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: r_foot
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobHarpyLArm
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: l_arm

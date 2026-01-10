@@ -1,11 +1,11 @@
-# I am a fox and I'm digging a leg, diggy digileg, diggy digleg
+# I am a fox and I'm digging a leg, diggy digileg, diggy digileg
 
 ######################
 # Furry Paws
 - type: marking
   id: DigilegPawLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Paw-Left-Leg
@@ -13,7 +13,7 @@
 - type: marking
   id: DigilegPawFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Paw-Left-Foot
@@ -21,7 +21,7 @@
 - type: marking
   id: DigilegPawLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Paw-Right-Leg
@@ -29,7 +29,7 @@
 - type: marking
   id: DigilegPawFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Paw-Right-Foot
@@ -38,7 +38,7 @@
 - type: marking
   id: DigilegPawDarkLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawDark-Left-Leg
@@ -46,7 +46,7 @@
 - type: marking
   id: DigilegPawDarkFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawDark-Left-Foot
@@ -54,7 +54,7 @@
 - type: marking
   id: DigilegPawDarkLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawDark-Right-Leg
@@ -62,7 +62,7 @@
 - type: marking
   id: DigilegPawDarkFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawDark-Right-Foot
@@ -71,7 +71,7 @@
 - type: marking
   id: DigilegPawSlimeLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawSlime-Left-Leg
@@ -79,7 +79,7 @@
 - type: marking
   id: DigilegPawSlimeFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawSlime-Left-Foot
@@ -87,7 +87,7 @@
 - type: marking
   id: DigilegPawSlimeLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawSlime-Right-Leg
@@ -95,7 +95,7 @@
 - type: marking
   id: DigilegPawSlimeFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: PawSlime-Right-Foot
@@ -105,7 +105,7 @@
 - type: marking
   id: DigilegAvianLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Avian-Left-Leg
@@ -113,7 +113,7 @@
 - type: marking
   id: DigilegAvianFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Avian-Left-Foot
@@ -121,7 +121,7 @@
 - type: marking
   id: DigilegAvianLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Avian-Right-Leg
@@ -129,7 +129,7 @@
 - type: marking
   id: DigilegAvianFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Avian-Right-Foot
@@ -138,7 +138,7 @@
 - type: marking
   id: DigilegAvianDarkLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: AvianDark-Left-Leg
@@ -146,7 +146,7 @@
 - type: marking
   id: DigilegAvianDarkFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: AvianDark-Left-Foot
@@ -154,7 +154,7 @@
 - type: marking
   id: DigilegAvianDarkLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: AvianDark-Right-Leg
@@ -162,7 +162,7 @@
 - type: marking
   id: DigilegAvianDarkFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: AvianDark-Right-Foot
@@ -171,7 +171,7 @@
 - type: marking
   id: DigilegChickenLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Chicken-Left-Leg
@@ -179,7 +179,7 @@
 - type: marking
   id: DigilegChickenFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Chicken-Left-Foot
@@ -187,7 +187,7 @@
 - type: marking
   id: DigilegChickenLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Chicken-Right-Leg
@@ -195,7 +195,7 @@
 - type: marking
   id: DigilegChickenFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: Chicken-Right-Foot
@@ -204,7 +204,7 @@
 - type: marking
   id: DigilegChickenSlimeLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: ChickenSlime-Left-Leg
@@ -212,7 +212,7 @@
 - type: marking
   id: DigilegChickenSlimeFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: ChickenSlime-Left-Foot
@@ -220,7 +220,7 @@
 - type: marking
   id: DigilegChickenSlimeLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: ChickenSlime-Right-Leg
@@ -228,7 +228,7 @@
 - type: marking
   id: DigilegChickenSlimeFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: ChickenSlime-Right-Foot
@@ -238,7 +238,7 @@
 - type: marking
   id: DigilegSynthlizLegLeft
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: SynthLiz-Left-Leg
@@ -246,7 +246,7 @@
 - type: marking
   id: DigilegSynthlizFootLeft
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: SynthLiz-Left-Foot
@@ -254,7 +254,7 @@
 - type: marking
   id: DigilegSynthlizLegRight
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: SynthLiz-Right-Leg
@@ -262,7 +262,7 @@
 - type: marking
   id: DigilegSynthlizFootRight
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   sprites:
   - sprite: _CS/DigiLegsAndChests.rsi
     state: SynthLiz-Right-Foot
@@ -349,7 +349,7 @@
     state: HumanChestMaleSkintoned
 
 - type: marking
-  id: DigilegHumanTorsoFemale
+  id: DigilegHumanTorsoFemaleSkintoned
   bodyPart: Chest
   markingCategory: BaseChest
   sprites:

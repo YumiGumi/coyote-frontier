@@ -171,16 +171,23 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             if (component.LegStyle != HumanoidLegStyle.Plantigrade
                 && proto.AltSprites.Count > 0)
             {
+                ProtoId<MarkingPrototype>? altMarkingProtoId = null;
                 // we have to do two things: check if the leg style is supported, and if not, check if DigitigradePaw
                 // is supported. At least one needs to be true!
-                if (proto.AltSprites.TryGetValue(component.LegStyle, out SpriteSpecifier? altSprite))
+                if (proto.AltSprites.TryGetValue(component.LegStyle, out ProtoId<MarkingPrototype> altSprite)
+                    || proto.AltSprites.TryGetValue(HumanoidLegStyle.DigitigradePaw, out altSprite))
                 {
-                    appropriateSprite = altSprite;
+                    altMarkingProtoId = altSprite;
                 }
-                else if (component.LegStyle != HumanoidLegStyle.DigitigradePaw
-                         && proto.AltSprites.TryGetValue(HumanoidLegStyle.DigitigradePaw, out SpriteSpecifier? altPawSprite))
+                if (altMarkingProtoId is not null
+                    && _prototypeManager.TryIndex(altMarkingProtoId, out MarkingPrototype? altMarkingProto))
                 {
-                    appropriateSprite = altPawSprite;
+                    // just use the first sprite, as base layers only have one sprite
+                    // the markings should only have one sprite anyway
+                    if (altMarkingProto.Sprites.Count > 0)
+                    {
+                        appropriateSprite = altMarkingProto.Sprites[0];
+                    }
                 }
                 // shader will be appliesed lader
             }
@@ -628,6 +635,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         if (MarkingCategoriesConversion.Category2Layer(
                 markingPrototype.MarkingCategory,
+                markingPrototype.BodyPart,
                 out var whichCat))
         {
             // WEEOO WEEOO set the base layer to be hidden on the comp

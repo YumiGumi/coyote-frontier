@@ -153,24 +153,56 @@
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_m
+  altSprites:
+    DigitigradePaw: DigilegMothTorsoMale
 
 - type: humanoidBaseSprite
   id: MobArachnidTorsoMale
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_m
+  altSprites:
+    DigitigradePaw: DigilegMothTorsoMale
 
 - type: humanoidBaseSprite
   id: MobArachnidTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_f
+  altSprites:
+    DigitigradePaw: DigilegMothTorsoFemale
 
 - type: humanoidBaseSprite
   id: MobArachnidLLeg
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: l_leg
+  altSprites:
+    DigitigradePaw: DigilegAvianLegLeft
+
+- type: humanoidBaseSprite
+  id: MobArachnidLFoot
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_foot
+  altSprites:
+    DigitigradePaw: DigilegAvianFootLeft
+
+- type: humanoidBaseSprite
+  id: MobArachnidRLeg
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_leg
+  altSprites:
+    DigitigradePaw: DigilegAvianLegRight
+
+- type: humanoidBaseSprite
+  id: MobArachnidRFoot
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_foot
+  altSprites:
+    DigitigradePaw: DigilegAvianFootRight
 
 - type: humanoidBaseSprite
   id: MobArachnidLHand
@@ -185,18 +217,6 @@
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: MobArachnidLFoot
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobArachnidRLeg
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
   id: MobArachnidRHand
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
@@ -207,9 +227,3 @@
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobArachnidRFoot
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: r_foot

@@ -1,3 +1,4 @@
+using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -80,11 +81,10 @@ public sealed partial class HumanoidSpeciesSpriteLayer : IPrototype
     public bool ForcedColoring { get; private set; }
 
     /// <summary>
-    ///     Coyote: A list of alternative sprites to be used for this layer,
-    ///     for if when they have different leg styles.
-    ///     Mostly just for legs and feet and chests.
-    ///     Done differently from markings, cus reasons.
+    ///     Coyote: If set, thisll load a marking's sprites to use for alternate leg styles.
+    ///     Used for digitigrade legs that are cute as heck.
+    ///     My butts dont lie
     /// </summary>
     [DataField("altSprites")]
-    public Dictionary<HumanoidLegStyle, SpriteSpecifier> AltSprites = new();
+    public Dictionary<HumanoidLegStyle, ProtoId<MarkingPrototype>> AltSprites = new();
 }

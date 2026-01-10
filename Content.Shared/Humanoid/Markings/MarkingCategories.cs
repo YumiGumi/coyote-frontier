@@ -31,35 +31,50 @@ namespace Content.Shared.Humanoid.Markings
         BaseRFoot,
         BaseRHand,
         BaseRLeg,
+        BaseArms,
+        BaseLegs,
     }
 
     public static class MarkingCategoriesConversion
     {
         /// <summary>
         /// Easy cheat cheet for converting BaseLayers to Bodyparts to hide!
-        /// Basically, if I have a marking in THIS category selected, I want to hide the base layer of that body part.
-        /// fucking kill me, dennis.
+        /// Basically if they have a base marking on a bodypart, we need to hide the base layer of that bodypart!
+        /// However, we only have four categories: Arms, legs, chest, head.
+        /// Chest and head are easy, arms and legs need to rout to left or right, and armleg or handfoot respectively.
         /// </summary>
         public static bool Category2Layer(
             MarkingCategories category,
+            HumanoidVisualLayers hvLayers,
             out HumanoidVisualLayers baseLayerToHide
             )
         {
-            baseLayerToHide = category switch
+            baseLayerToHide = HumanoidVisualLayers.Disregard;
+            switch (category)
             {
-                MarkingCategories.BaseChest => HumanoidVisualLayers.Chest,
-                MarkingCategories.BaseHead => HumanoidVisualLayers.Head,
-                MarkingCategories.BaseLArm => HumanoidVisualLayers.LArm,
-                MarkingCategories.BaseLFoot => HumanoidVisualLayers.LFoot,
-                MarkingCategories.BaseLHand => HumanoidVisualLayers.LHand,
-                MarkingCategories.BaseLLeg => HumanoidVisualLayers.LLeg,
-                MarkingCategories.BaseRArm => HumanoidVisualLayers.RArm,
-                MarkingCategories.BaseRFoot => HumanoidVisualLayers.RFoot,
-                MarkingCategories.BaseRHand => HumanoidVisualLayers.RHand,
-                MarkingCategories.BaseRLeg => HumanoidVisualLayers.RLeg,
-                _ => HumanoidVisualLayers.Disregard, // dont trigger the base layer hiding logic, dennis
-            };
-            return baseLayerToHide != HumanoidVisualLayers.Disregard;
+                case MarkingCategories.BaseChest:
+                    baseLayerToHide = HumanoidVisualLayers.Chest;
+                    return true;
+                case MarkingCategories.BaseHead:
+                    baseLayerToHide = HumanoidVisualLayers.Head;
+                    return true;
+                // idk
+                case MarkingCategories.BaseArms
+                    or MarkingCategories.BaseLegs
+                    when hvLayers
+                        is HumanoidVisualLayers.LArm
+                        or HumanoidVisualLayers.LHand
+                        or HumanoidVisualLayers.RArm
+                        or HumanoidVisualLayers.RHand
+                        or HumanoidVisualLayers.LLeg
+                        or HumanoidVisualLayers.LFoot
+                        or HumanoidVisualLayers.RLeg
+                        or HumanoidVisualLayers.RFoot:
+                    baseLayerToHide = hvLayers;
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         public static MarkingCategories FromHumanoidVisualLayers(HumanoidVisualLayers layer)
