@@ -39,6 +39,7 @@
       - bbq
       - cheap
   - type: Sprite
+    sprite: _CS/Objects/Consumable/Food/Baked/donkpocket.rsi
     state: bbq
 
 - type: entity
@@ -79,6 +80,7 @@
         - ReagentId: Nutriment
           Quantity: 5
   - type: Sprite
+    sprite: _CS/Objects/Consumable/Food/Baked/donkpocket.rsi
     state: chocolate
 
 - type: entity
@@ -112,6 +114,7 @@
       - maple
       - cheap
   - type: Sprite
+    sprite: _CS/Objects/Consumable/Food/Baked/donkpocket.rsi
     state: maple
 
 - type: entity
@@ -148,6 +151,7 @@
       - sweet
       - cheap
   - type: Sprite
+    sprite: _CS/Objects/Consumable/Food/Baked/donkpocket.rsi
     state: supermatter
 
 - type: entity
@@ -168,4 +172,4 @@
         - ReagentId: Nutriment
           Quantity: 10
         - ReagentId: Uranium
-          Quantity: 2
+          Quantity: 10
