@@ -97,14 +97,23 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: MaleHuman
-  - type: Vocalizer
-    hideChat: true
-    minVocalizeInterval: 30
-    maxVocalizeInterval: 120
-  - type: DatasetVocalizer
-    dataset: spacepunkhumanoidchatter
+  # CS - Behind on WizDen upgrades so here we go
+  # - type: Vocalizer
+  #   hideChat: true
+  #   minVocalizeInterval: 30
+  #   maxVocalizeInterval: 120
+  # - type: DatasetVocalizer
+  #   dataset: spacepunkhumanoidchatter
+  # CS - end
   - type: AutoWakeUp
   - type: StinkyTrait
+  # CS - old style mob vocalisations
+  - type: Advertise
+    pack: spacepunkhumanoidchatter
+    minimumWait: 30
+    maximumWait: 120
+    nextAdvertisementTime: 10
+  # CS - end
 
 # region loot
 - type: entityTable
