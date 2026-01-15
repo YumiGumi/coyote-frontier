@@ -522,6 +522,7 @@ namespace Content.Client.Lobby.UI
             Markings.OnMarkingRemoved += OnMarkingChange;
             Markings.OnMarkingColorChange += OnMarkingChange;
             Markings.OnMarkingRankChange += OnMarkingChange;
+            Markings.OnLegStyleChanged += OnLegsChanged;
 
             #endregion Markings
 
@@ -1357,6 +1358,20 @@ namespace Content.Client.Lobby.UI
                     Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
                     break;
                 }
+                case HumanoidSkinColor.AnimalFur: // Einstein Engines - Tajaran
+                    {
+                        if (!RgbSkinColorContainer.Visible)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                        }
+
+                        var color = SkinColor.ClosestAnimalFurColor(_rgbSkinColorSelector.Color);
+
+                        Markings.CurrentSkinColor = color;
+                        Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+                        break;
+                }
                 // Frontier: Sheleg
                 case HumanoidSkinColor.ShelegToned:
                 {
@@ -1376,6 +1391,15 @@ namespace Content.Client.Lobby.UI
             }
 
             ReloadProfilePreview();
+        }
+
+        private void OnLegsChanged(HumanoidLegStyle legsStyle)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithLegs(legsStyle));
+            ReloadPreview();
         }
 
         protected override void Dispose(bool disposing)
@@ -1646,6 +1670,18 @@ namespace Content.Client.Lobby.UI
 
                     break;
                 }
+                case HumanoidSkinColor.AnimalFur: // Einstein Engines - Tajaran
+                    {
+                        if (!RgbSkinColorContainer.Visible)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                        }
+
+                        _rgbSkinColorSelector.Color = SkinColor.ClosestAnimalFurColor(Profile.Appearance.SkinColor);
+
+                        break;
+                }
                 // Frontier: Sheleg
                 case HumanoidSkinColor.ShelegToned:
                     {
@@ -1690,9 +1726,13 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
-            Markings.SetData(Profile.Appearance.Markings, Profile.Species,
-                Profile.Sex, Profile.Appearance.SkinColor, Profile.Appearance.EyeColor
-            );
+            Markings.SetData(
+                Profile.Appearance.Markings,
+                Profile.Species,
+                Profile.Sex,
+                Profile.Appearance.SkinColor,
+                Profile.Appearance.EyeColor,
+                Profile.Appearance.LegStyle);
         }
 
         private void UpdateGenderControls()
