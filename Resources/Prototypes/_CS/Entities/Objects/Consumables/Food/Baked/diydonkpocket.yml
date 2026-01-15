@@ -7,16 +7,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - bread
-      - bbq
       - wassail
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 8
+      - bbq
+      - bread
   - type: Sprite
     sprite: _CS/Objects/Consumable/Food/Baked/diydonkpocket.rsi
     state: bbq
@@ -29,16 +22,9 @@
   components:
   - type: FlavorProfile
     flavors:
-    - bread
-    - sweet
     - wassail
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 8
+    - sweet
+    - bread
   - type: Sprite
     sprite: _CS/Objects/Consumable/Food/Baked/diydonkpocket.rsi
     state: banana
