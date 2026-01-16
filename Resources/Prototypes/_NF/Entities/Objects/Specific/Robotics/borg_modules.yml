@@ -55,6 +55,9 @@
       displayName: borg-placeholder-display-name-fuel
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: jetpack-module }
+  - type: Tag
+    tags:
+    - BorgModuleJetpack # Coyote
 
 - type: entity
   id: BorgModuleRCDShipyard

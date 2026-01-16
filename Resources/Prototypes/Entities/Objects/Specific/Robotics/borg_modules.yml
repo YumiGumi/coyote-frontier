@@ -496,6 +496,9 @@
     - MaintenanceJack # Frontier
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
+  - type: Tag
+    tags:
+    - BorgModuleTool # Coyote
 
 # cargo modules
 - type: entity
