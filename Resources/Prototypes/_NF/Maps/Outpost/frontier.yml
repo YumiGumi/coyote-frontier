@@ -35,9 +35,10 @@
             Chaplain: [ -1, -1]
             Borg: [ -1, -1 ]
             StationRepresentative: [ 1, 2 ]
-            StationTrafficController: [ 1, 2 ]
+#            StationTrafficController: [ 1, 2 ]
+            Secretary: [ 5, 5 ]
             SecurityGuard: [ 2 , 5 ]
-            Valet: [ 0, 0 ]
+#            Valet: [ 0, 0 ]
             NFJanitor: [ 2, 5 ]
             MailCarrier: [ 2, 5 ]
           tags:

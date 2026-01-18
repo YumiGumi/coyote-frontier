@@ -7,8 +7,8 @@
     - !type:OverallPlaytimeRequirement
       time: 72000 # Frontier - 20 hrs (the real condition here is the whitelist)
     - !type:RoleTimeRequirement
-      role: JobPlantManager
-      time: 3600 # CS: 1 hour
+      role: JobSecretary
+      time: 72000
   whitelisted: true
   startingGear: PlantManagerGear
   alwaysUseSpawner: true

@@ -100,6 +100,11 @@
   result: ClothingHeadHatStcCap
 
 - type: latheRecipe
+  id: ClothingHeadHatSecretaryCap
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingHeadHatSecretaryCap
+
+- type: latheRecipe
   id: ClothingHeadHatPirate
   parent: NFBaseJumpsuitRecipe
   result: ClothingHeadHatPirate

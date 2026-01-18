@@ -195,6 +195,7 @@
   # Other
   - ClothingWalletLeatherMail
   - ClothingHeadHatStcCap
+  - ClothingHeadHatSecretaryCap
 
 - type: latheRecipePack
   id: NFPirateClothing

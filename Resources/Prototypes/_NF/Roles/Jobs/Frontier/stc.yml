@@ -4,6 +4,7 @@
   description: job-description-stc
   playTimeTracker: JobStc
   startingGear: StcGear
+  setPreference: false # soft removed, cus they dont really anything, also secretary #27503
   alwaysUseSpawner: true
   requirements:
     - !type:OverallPlaytimeRequirement
@@ -16,7 +17,6 @@
   supervisors: job-supervisors-sr
   weight: 160
   displayWeight: 50 # Second from the top
-  setPreference: true
   access:
   - Service
   - Maintenance

@@ -61,6 +61,7 @@
   - !type:RoleBlacklistLoadoutEffect
     blacklist:
     - JobStationTrafficController
+    - JobSecretary
     - JobDirectorOfCare
 
 - type: loadoutEffectGroup

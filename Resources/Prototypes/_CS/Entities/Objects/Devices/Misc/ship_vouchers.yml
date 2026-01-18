@@ -142,3 +142,19 @@
     - Hitchhiker
     - Peeper
     - Speakeasy
+
+- type: entity
+  parent: BaseShipVoucherCoyoteGeneric
+  id: ShipVoucherCoyoteSecretary
+  name: secretary ship voucher
+  description: Allows for one (1) free rental from a selection of secretorial shuttles.
+  components:
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Sr
+    useAnywhere: true
+    vessels:
+    - Baroness
+    - Duchess
+    - Chauffeur
+    - Harbormaster

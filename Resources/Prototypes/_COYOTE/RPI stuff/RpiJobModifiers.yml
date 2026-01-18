@@ -4,6 +4,10 @@
 
 - type: rpiJobModifier
   id: rpiJobModifierStationPrincess
+  multiplier: 5.0
+
+- type: rpiJobModifier
+  id: rpiJobModifierStationDutchess
   multiplier: 3.0
 
 - type: rpiJobModifier

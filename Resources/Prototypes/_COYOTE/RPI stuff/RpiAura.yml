@@ -63,3 +63,13 @@
   minutesTillFullEffect: 120
   minutesUntilDecayDelay: 120
   minutesUntilDecayToZero: 300
+
+# station Dutchess makes everyone horny faster
+# not horny, paid more, wtf
+- type: rpiAura
+  id: rpiAuraStationDutchess
+  multiplier: 2.0
+  maxDistance: 500.0
+  minutesTillFullEffect: 120
+  minutesUntilDecayDelay: 120
+  minutesUntilDecayToZero: 300
