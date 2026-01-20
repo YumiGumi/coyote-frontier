@@ -76,6 +76,7 @@
     back:
     - EncryptionKeyFreelance
     - EncryptionKeyMedical
+    - ComputerIFFFlatpack
 
 - type: chameleonOutfit
   id: RipperDocChameleonOutfit
@@ -87,10 +88,6 @@
     neck: ClothingNeckStethoscope
     outerClothing: ClothingOuterCoatLab
     gloves: ClothingHandsGlovesLatex
-  storage:
-    back:
-    - EncryptionKeyFreelance
-    - ComputerIFFFlatpack
 
 - type: roleLoadout
   id: JobRipperDoc
