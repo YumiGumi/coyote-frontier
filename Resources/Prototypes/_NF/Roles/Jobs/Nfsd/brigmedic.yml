@@ -4,18 +4,11 @@
   description: job-description-brigmedic-nf
   playTimeTracker: JobBrigmedic
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 21600 # 6 hours
-  alternateRequirementSets:
-    longerPlaytimeLessSec:
-    - !type:OverallPlaytimeRequirement
-      time: 360000 # 100 hours
-    - !type:DepartmentTimeRequirement # CS - require at least some security time so the whitelist intent functions
-      department: Security
-      time: 3600 # 1 hour
+  - !type:OverallPlaytimeRequirement
+    time: 43200 # 12 hours
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 43200 # 12 hours
   startingGear: BrigmedicGear
   icon: JobIconBrigmedicNF
   supervisors: job-supervisors-bailiff

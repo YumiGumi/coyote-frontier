@@ -8,7 +8,7 @@
     time: 43200 # 12 hours
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 3600 # frontier: 6 hours | CS: 1 hour
+    time: 21600 # 6 hours
   startingGear: SecurityGuardGear
   alwaysUseSpawner: true
   icon: "JobIconSecurityGuard"

@@ -6,11 +6,11 @@
   description: job-description-senior-officer
   playTimeTracker: JobSeniorOfficer
   requirements: # Coyote editted the playtime required for Sergeant
-    - !type:OverallPlaytimeRequirement
-      time: 108000 # 30 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 86400 # 24 hours
+  - !type:OverallPlaytimeRequirement
+    time: 108000
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 172800 # 48 hours
   startingGear: SeniorOfficerGear
   icon: JobIconSergeant
   supervisors: job-supervisors-bailiff

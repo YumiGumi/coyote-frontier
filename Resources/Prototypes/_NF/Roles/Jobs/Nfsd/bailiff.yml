@@ -5,10 +5,10 @@
   playTimeTracker: JobWarden
   requirements: # Coyote editted the playtime required for Sergeant
   - !type:OverallPlaytimeRequirement
-    time: 108000 # 30 hours
+    time: 108000
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 86400 # 24 hours
+    time: 172800 # 48 hours
   startingGear: BailiffGear
   icon: JobIconBailiff
   supervisors: job-supervisors-sheriff

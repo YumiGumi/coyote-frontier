@@ -5,10 +5,10 @@
   playTimeTracker: JobPublicAffairsLiaison
   requirements: # Coyote editted the playtime required for Sergeant
   - !type:OverallPlaytimeRequirement
-    time: 108000 # 30 hours
+    time: 108000
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 86400 # 24 hours
+    time: 172800 # 48 hours
   startingGear: PublicAffairGear
   icon: "JobIconPublicAffairsLiaison"
   supervisors: job-supervisors-cadet
@@ -45,6 +45,9 @@
     - BoxFolderPalBrown
     - BoxFolderNfsdForms
     - RubberStampPal
+    - BaseSecurityUplinkRadioOfficer
+    - FrontierUplinkCoin5 # Coyote added 5 FUCs to Sergeants
+    - ShipVoucherNfsdSergeant
     - EncryptionKeyCommand
 
 - type: chameleonOutfit

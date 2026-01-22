@@ -9,7 +9,7 @@
     - !type:RoleTimeRequirement
       role: JobSecretary
       time: 72000
-  whitelisted: true
+  whitelisted: false
   startingGear: PlantManagerGear
   alwaysUseSpawner: true
   icon: "JobIconPlantManager"
