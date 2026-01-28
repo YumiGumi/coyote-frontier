@@ -5,5 +5,5 @@
   flarpiesPerHourOneNearby: 10
   flarpiesPerHourTwoNearby: 20
   flarpiesPerHourThreeOrMoreNearby: 40
-  maxRange: 25
+  nearbyRadius: 25
 
