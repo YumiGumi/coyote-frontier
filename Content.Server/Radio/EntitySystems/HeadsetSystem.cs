@@ -109,7 +109,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             ref args,
             out RadioDegradationParams dParams);
 
-        if (dParams.DropMessageEntirely)
+        if (dParams.DropMessageEntirely || dParams.DropMessage)
             return;
         // do the KSSHHT
         var staticEv = new DoRadioStaticEvent(
@@ -120,8 +120,6 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             args.Message,
             dParams);
         RaiseLocalEvent(uid, ref staticEv);
-        if (dParams.DropMessage)
-            return;
         // Send the message to the client
         _netMan.ServerSendMessage(chatMess, actor.PlayerSession.Channel);
     }
