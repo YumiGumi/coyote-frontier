@@ -27,7 +27,7 @@ namespace Content.Server.RoundEnd
 {
     /// <summary>
     /// Handles ending rounds normally and also via requesting it (e.g. via comms console)
-    /// If you request a round end then an escape shuttle will be used.
+    /// If you request a round end then an escape shuttle will bee used.
     /// </summary>
     public sealed class RoundEndSystem : EntitySystem
     {
